@@ -11,7 +11,8 @@ if (DB_HOST === '' || DB_USER === '' || DB_NAME === '') {
     exit;
 }
 
-$dbManager = new DatabaseManager(new MyPDO);
+$dsn = DB_DRIVER . ":host=" . DB_HOST;
+$dbManager = new DatabaseManager(new MyPDO($dsn));
 
 $dbName = DB_NAME;
 
