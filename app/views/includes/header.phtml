@@ -1,0 +1,99 @@
+        <!--start header -->
+        <nav class="navbar navbar-expand-md bg-body border-bottom mb-3 p-0">
+        	<div class="container">
+        		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        			<span class="navbar-toggler-icon"></span>
+        		</button>
+
+        		<div class="d-flex fs-1 lh-1 p-2 text-dark text-decoration-none" style="font-weight: 500;">
+        			<div class="text-body">T</div>
+        			<div class="d-flex flex-column">
+        				<div class="text-body">in</div>
+        				<div class="text-info fw-bold align-self-end" style="line-height: 0.7rem; margin-top: -0.3rem; margin-right:-0.25rem; font-size: calc((1.375rem + 1.5vw)*0.3)">MVC</div>
+        			</div>
+        			<div class="text-body">y</div>
+        		</div>
+
+        		<div class="vr d-none d-md-block"></div>
+
+        		<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        			<div class="offcanvas-header">
+        				<div class="d-flex fs-1 lh-1 p-2 text-dark text-decoration-none" style="font-weight: 500;">
+        					<div class="text-body">T</div>
+        					<div class="d-flex flex-column">
+        						<div class="text-body">in</div>
+        						<div class="text-info fw-bold align-self-end" style="line-height: 0.7rem; margin-top: -0.3rem; margin-right:-0.25rem; font-size: calc((1.375rem + 1.5vw)*0.3)">MVC</div>
+        					</div>
+        					<div class="text-body">y</div>
+        				</div>
+        				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        			</div>
+        			<div class="offcanvas-body align-items-center ">
+        				<ul class="navbar-nav me-auto mb-2 mb-sm-0">
+        					<li class="nav-item">
+        						<a class="nav-link active" aria-current="page" href="<?= URL_ROOT ?>">Home</a>
+        					</li>
+        					<li class="nav-item">
+        						<a class="nav-link" href="#">Link</a>
+        					</li>
+        					<li class="nav-item dropdown">
+        						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        							Dropdown
+        						</a>
+        						<ul class="dropdown-menu">
+        							<li><a class="dropdown-item" href="#">Action</a></li>
+        							<li><a class="dropdown-item" href="#">Another action</a></li>
+        							<li>
+        								<hr class="dropdown-divider">
+        							</li>
+        							<li><a class="dropdown-item" href="#">Something else here</a></li>
+        						</ul>
+        					</li>
+        				</ul>
+        				<form class="d-flex px-md-3 py-3" role="search">
+        					<div class="input-group flex-nowrap">
+        						<input type="text" placeholder="Search..." class="form-control" id="search" name="search">
+        						<button type="submit" class="btn btn-outline-primary-subtle">
+        							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        								<circle cx="11" cy="11" r="8"></circle>
+        								<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        							</svg>
+        						</button>
+        					</div>
+        				</form>
+        			</div>
+        		</div>
+        		<div class="ms-auto pe-3 order-md-2">
+        			<!-- light/dark theme switcher start -->
+        			<?php $this->loadView("includes/theme_switcher"); ?>
+        			<!-- light/dark theme switcher end -->
+        		</div>
+        		<div class="vr d-none d-md-block order-md-3"></div>
+        		<div class="dropdown py-2 ps-3 order-1 order-md-4">
+        			<a href="#" class="d-flex align-items-center link-body-emphasis link-opacity-100-hover text-decoration-none border-0 dropdown-toggle dropdown-toggle-nocaret" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+        				<img src="<?= ASSETS . "images/avatars/" . (!empty($_SESSION['user_avatar']) ? $_SESSION['user_avatar'] : "default-user.png") ?>" width="44" height="44" class="rounded-circle bg-secondary-subtle avatar" alt="user avatar">
+        				<div class="ps-3 d-none d-md-block">
+        					<p class="fw-bold mb-0"><?= $_SESSION['user_name'] . " " . $_SESSION['user_lastname'] ?></p>
+        					<p class="text-muted mb-0"><?= $_SESSION['user_roll'] === "0" ? "Admin" : "User" ?></p>
+        				</div>
+        			</a>
+        			<ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="dropdownUser">
+        				<li class="d-block d-md-none">
+        					<p class="dropdown-item-text fw-bold mb-0"><?= $_SESSION['user_name'] . " " . $_SESSION['user_lastname'] ?></p>
+        				</li>
+        				<li class="d-block d-md-none">
+        					<p class="dropdown-item-text text-muted mb-0"><?= $_SESSION['user_roll'] === "0" ? "Admin" : "User" ?></p>
+        				</li>
+        				<li class="d-block d-md-none">
+        					<hr class="dropdown-divider">
+        				</li>
+        				<li><a class="dropdown-item d-flex align-items-center" href="<?= URL_ROOT ?>user/profile"><i class="bx bx-user-circle pe-2"></i>Profile</a></li>
+        				<li>
+        					<hr class="dropdown-divider">
+        				</li>
+        				<li><a class="dropdown-item d-flex align-items-center" href="<?= URL_ROOT ?>user/logout"><i class="bx bx-log-out-circle pe-2"></i>Sign out</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+        <!--end header -->

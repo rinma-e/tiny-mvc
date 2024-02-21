@@ -1,0 +1,39 @@
+        <!--sidebar wrapper -->
+        <div class="sidebar-wrapper" data-simplebar="true">
+        	<div class="sidebar-header">
+        		<div>
+        			<a href="<?= URL_ROOT ?>">
+        				<h4 class="logo-text"><?= APP_NAME ?></h4>
+        			</a>
+        		</div>
+        		<div class="toggle-icon ms-auto">
+        			<i class='bx bx-arrow-to-left'></i>
+        		</div>
+        	</div>
+        	<!--navigation-->
+        	<ul class="metismenu" id="menu">
+        		<li class="li menu-label">Tasks</li>
+        		<li class="li">
+        			<div class='mm-trigger'>
+        				<div class="parent-icon"><i class="bx bx-task"></i>
+        				</div>
+        				<div class="menu-title"><a href='<?= URL_ROOT . 'today' ?>'>Today</a></div>
+        			</div>
+        		</li>
+        		<li class="li">
+        			<div class='mm-trigger'>
+        				<div class="parent-icon"><i class="bx bx-calendar"></i>
+        				</div>
+        				<div class="menu-title"><a href='<?= URL_ROOT . 'next5' ?>'>Next 5 days</a></div>
+        			</div>
+        		</li>
+        		<li class="li menu-label">
+        			<div class="d-flex flex-grow-1 align-items-center justify-content-between">
+        				<span>Spaces</span>
+        				<button type="button" class="btn btn-success radius-30" data-action="add" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Add space"><i class="bx bx-plus"></i></button>
+        			</div>
+        		</li>
+        	</ul>
+        	<!--end navigation-->
+        </div>
+        <!--end sidebar wrapper -->

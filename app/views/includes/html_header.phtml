@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--favicon
+	<link rel="icon" href="<?= ASSETS ?>images/favicon-32x32.png" type="image/png" />-->
+
+	<!--plugins-->
+	<?php if (!in_array(basename($_SERVER['REQUEST_URI']), ['login', 'register', 'forgot_password'])) : ?>
+		<link href="<?= ASSETS ?>plugins/notifications/css/lobibox.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet" type="text/css">
+	<?php endif ?>
+
+	<!-- loader-->
+	<link href="<?= ASSETS ?>plugins/pace/pace.min.css" rel="stylesheet" type="text/css" />
+	<script src="<?= ASSETS ?>plugins/pace/pace.min.js" type="text/javascript"></script>
+
+	<!-- Bootstrap CSS -->
+	<link href="<?= ASSETS ?>plugins/bootstrap_bundle/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+
+	<link href="<?= ASSETS ?>css/color-modes-switcher.css" rel="stylesheet" type="text/css">
+	<link href="<?= ASSETS ?>css/icons.css" rel="stylesheet" type="text/css">
+	<link href="<?= ASSETS ?>css/app.css" rel="stylesheet" type="text/css">
+
+	<!-- Theme Style CSS -->
+
+	<!-- set page title -->
+	<title><?= is_array($data) ? $data['page_title'] : $data . " | " . APP_NAME ?></title>
+</head>

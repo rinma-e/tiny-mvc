@@ -1,0 +1,42 @@
+[20/02/2024 15:48:24]->PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in E:\laragon\www\tiny_mvc\app\core\MyPDO.php:17
+Stack trace:
+#0 E:\laragon\www\tiny_mvc\app\core\MyPDO.php(17): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 E:\laragon\www\tiny_mvc\app\controllers\UserController.php(15): App\Core\MyPDO->__construct()
+#2 E:\laragon\www\tiny_mvc\app\core\Core.php(67): App\Controllers\UserController->__construct()
+#3 E:\laragon\www\tiny_mvc\public\index.php(7): App\Core\Core->__construct()
+#4 {main}
+[20/02/2024 15:48:27]->ParseError: syntax error, unexpected '|', expecting ';' or '{' in E:\laragon\www\tiny_mvc\app\models\UserModel.php:23
+Stack trace:
+#0 E:\laragon\www\tiny_mvc\app\controllers\UserController.php(15): App\Core\Controller->loadModel('UserModel', Object(App\Core\MyPDO))
+#1 E:\laragon\www\tiny_mvc\app\core\Core.php(67): App\Controllers\UserController->__construct()
+#2 E:\laragon\www\tiny_mvc\public\index.php(7): App\Core\Core->__construct()
+#3 {main}
+[20/02/2024 15:49:59]->PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it in E:\laragon\www\tiny_mvc\app\core\MyPDO.php:17
+Stack trace:
+#0 E:\laragon\www\tiny_mvc\app\core\MyPDO.php(17): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\laragon\www\tiny_mvc\app\controllers\UserController.php(15): App\Core\MyPDO->__construct()
+#2 E:\laragon\www\tiny_mvc\app\core\Core.php(67): App\Controllers\UserController->__construct()
+#3 E:\laragon\www\tiny_mvc\public\index.php(7): App\Core\Core->__construct()
+#4 {main}
+[20/02/2024 15:50:05]->PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it in E:\laragon\www\tiny_mvc\app\core\MyPDO.php:17
+Stack trace:
+#0 E:\laragon\www\tiny_mvc\app\core\MyPDO.php(17): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\laragon\www\tiny_mvc\app\controllers\UserController.php(15): App\Core\MyPDO->__construct()
+#2 E:\laragon\www\tiny_mvc\app\core\Core.php(67): App\Controllers\UserController->__construct()
+#3 E:\laragon\www\tiny_mvc\public\index.php(7): App\Core\Core->__construct()
+#4 {main}
+[20/02/2024 15:50:08]->PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it in E:\laragon\www\tiny_mvc\app\core\MyPDO.php:17
+Stack trace:
+#0 E:\laragon\www\tiny_mvc\app\core\MyPDO.php(17): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\laragon\www\tiny_mvc\app\controllers\UserController.php(15): App\Core\MyPDO->__construct()
+#2 E:\laragon\www\tiny_mvc\app\core\Core.php(67): App\Controllers\UserController->__construct()
+#3 E:\laragon\www\tiny_mvc\public\index.php(7): App\Core\Core->__construct()
+#4 {main}
+[20/02/2024 15:54:36]->PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it in E:\laragon\www\tiny_mvc\app\core\MyPDO.php:17
+Stack trace:
+#0 E:\laragon\www\tiny_mvc\app\core\MyPDO.php(17): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\laragon\www\tiny_mvc\app\controllers\UserController.php(15): App\Core\MyPDO->__construct()
+#2 E:\laragon\www\tiny_mvc\app\core\Core.php(67): App\Controllers\UserController->__construct()
+#3 E:\laragon\www\tiny_mvc\public\index.php(7): App\Core\Core->__construct()
+#4 {main}
