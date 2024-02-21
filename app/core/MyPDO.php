@@ -6,15 +6,15 @@ use PDO;
 
 class MyPDO extends PDO
 {
-    public function __construct()
+    public function __construct($dsn = NULL, $username = DB_USER, $password = DB_PASSWORD, $options = NULL)
     {
-        $dsn = DB_DRIVER . ":host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
-        $options = [
+        $dsn ?? $dsn = DB_DRIVER . ":host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
+        $options ?? $options = [
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => false,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         ];
-        parent::__construct($dsn, DB_USER, DB_PASSWORD, $options);
+        parent::__construct($dsn, $username, $password, $options);
     }
 
     public function run($sql, $arguments = NULL)
