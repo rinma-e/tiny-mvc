@@ -1,4 +1,4 @@
-### TinyMVC
+# TinyMVC
 
 ## About TinyMVC
 
@@ -14,7 +14,7 @@ Personal project to explore MVC structure. It comes with built in login/registra
 
 ## Quick start
 
-# Installation
+### Installation
 
 1. Make sure your envirement has minimum requirements met for PHP and MySQL,
 2. Clone this repo,
@@ -26,7 +26,7 @@ Personal project to explore MVC structure. It comes with built in login/registra
 8. When database and tables are installed, in your browser navigate to TinyMVC folder on your host,
 9. In repo is also .sql file if you need to install database and tables manually just make sure to change database name in .sql file.
 
-# Info
+### Info
 
 **Routing:**
 Dynamic routing that is using prity URLs. URL structure is controller/method/parameters.
