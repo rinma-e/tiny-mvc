@@ -18,7 +18,7 @@ Personal project to explore MVC structure. It comes with built in login/registra
 2. Clone this repo,
 3. In 'app/config/config.php' set your database configuration,
 4. Open your consol and navigate to folder where TinyMVC is cloned,
-5. For any system run 'php setup-script.php'. This will create database with name specified in config file and create necessary tables for login/registration,
+5. For any system run 'php setup-script.php'. This will create database with name specified in config file and create necessary tables for login/registration. NOTE: Avast or AVG may alert for php files to contain treat when run from shell. If this happens when You run this scriot just put script to exception,
 6. For each step (4 steps) You will be prompted,
 7. If you like to reset databese or reset any of tables just run setup script again and follow prompt,
 8. When database and tables are installed, in your browser navigate to TinyMVC folder on your host,
