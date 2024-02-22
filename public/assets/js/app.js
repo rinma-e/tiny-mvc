@@ -34,9 +34,6 @@ $(function () {
   });
 });
 
-// base url
-let base_url = window.location.origin + "/tiny_mvc/";
-
 /**
  * Adds a specified class to the elements with the given IDs, if the class is not already present.
  *

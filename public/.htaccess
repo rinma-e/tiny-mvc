@@ -2,7 +2,7 @@
     Options -Multiviews
 
     RewriteEngine On
-    RewriteBase /tiny_mvc/public
+    #RewriteBase /tiny-mvc/public
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

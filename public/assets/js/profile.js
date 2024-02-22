@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     avatarImg && formData.append("avatar", avatarImg); // if there is a file selected append it
     formData.append("csrf_token", JSON.stringify(csrf_token));
 
-    fetch(base_url + "user/updateUserAvatar", {
+    fetch("updateUserAvatar", {
       method: "POST",
       body: formData,
     })
@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (hasChanged) {
         // send data
-        fetch(base_url + "user/updateUserProfile", {
+        fetch("updateUserProfile", {
           method: "POST",
           body: formData,
         })
@@ -474,7 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isObjectEmpty(passwordErrors)) {
         // send data
-        fetch(base_url + "user/updateUserPassword", {
+        fetch("updateUserPassword", {
           method: "POST",
           body: formData,
         })

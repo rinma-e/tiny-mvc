@@ -29,20 +29,25 @@ define('DEVELOPMENT', true);
 // protocol type http or https
 define('PROTOCOL', 'https');
 
-//APP root folder
+// path to app folder (absolute path)
 define('APP_ROOT', dirname(dirname(__FILE__)));
 
-// upload root folder
+// path to upload root folder (absolute path)
 define('UPLOAD_ROOT', str_replace("\\", "/", dirname(dirname(__DIR__))) . "/public/");
 
 if (isset($_SERVER['SERVER_NAME'])) {
-    // root and asset paths
-    $path = str_replace("\\", "/", PROTOCOL . "://" . $_SERVER['SERVER_NAME'] . dirname(dirname(__DIR__))  . "/");
-    $path = str_replace($_SERVER['DOCUMENT_ROOT'], "", $path);
+    // URL path very if we use virtual host or not
+    if (isset($_SERVER['IS_VIRTUAL_HOST_ALIAS'])) {
+        $path = PROTOCOL . "://" . $_SERVER['HTTP_HOST'] . '/';
+    } else {
+        $projectBasePath = explode("\\", dirname(dirname(__DIR__)));
+        $projectBaseName = end($projectBasePath);
+        $path = PROTOCOL . "://" . $_SERVER['SERVER_NAME'] . "/" . $projectBaseName  . "/";
+    }
 
-    //URL root path
+    // Define the URL root path
     define('URL_ROOT', $path);
 
-    // assets URL root path
-    define('ASSETS', $path . "public/assets/");
+    // Assets URL root path
+    define('ASSETS', $path . "assets/");
 }
