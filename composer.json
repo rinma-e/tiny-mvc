@@ -1,0 +1,17 @@
+{
+    "name": "joe/tiny-mvc",
+    "description": "TinyMVC is project created to explore MVC structure",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marin Ercegovac",
+            "email": "ercegovac.marin@gmail.com"
+        }
+    ],
+    "require": {}
+}

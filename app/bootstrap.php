@@ -2,17 +2,8 @@
 
 use App\Core\ErrorHandler;
 
-// Autoload core libraries
-spl_autoload_register(function ($className) {
-     // replace namespace separators with directory separators in the relative
-     // class name, append with .php
-     $file = realpath(dirname(__DIR__)) . '\\' . strtolower($className) . '.php';
-
-     // if the file exists, require it
-     if (file_exists($file)) {
-          require_once $file;
-     }
-});
+// Autoload classes with composer
+require_once __DIR__ . '/../vendor/autoload.php';
 
 // load configurations
 require_once 'config/config.php';
